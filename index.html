@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <style>
+        /* Estilização básica do corpo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilização da seção de pesquisa */
+        .search-section {
+            background: #fff;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-section label {
+            margin: 0;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        .search-section input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .search-section button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .search-section button:hover {
+            background-color: #357abd;
+        }
+
+        /* Estilização do título principal */
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+            margin-top: 20px;
+        }
+
+        /* Estilização do formulário */
+        form {
+            background: #fff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form h2 {
+            margin-top: 0;
+            color: #4a90e2;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"], 
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        /* Estilização do botão "Listar livros" */
+        #listar {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px auto;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        #listar:hover {
+            background-color: #357abd;
+        }
+
+        /* Estilização dos resultados dos livros */
+        #livros {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        #livros div {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #livros h2 {
+            margin: 0 0 10px;
+            color: #4a90e2;
+        }
+
+        #livros p {
+            margin: 5px 0;
+        }
+
+        /* Removendo o link do botão de busca */
+        .search-section button a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h1>Biblioteca</h1>
+    <div class="search-section">
+        <label for="Pesquisar">Pesquisar:</label>
+        <input type="text" id="Pesquisar" placeholder="Digite o título ou autor">
+        <button id="buscar">Buscar</button>
+    </div>
+    <form id="form">
+        <h2>Cadastrar livro</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite o nome do livro" required>
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" placeholder="Digite o autor do livro" required>
+        <label for="genero">Gênero:</label>
+        <input type="text" id="genero" placeholder="Digite o gênero do livro" required>
+        <label for="ano">Ano de publicação:</label>
+        <input type="number" id="ano" placeholder="Digite o ano de lançamento" required>
+        <button id="botao">Cadastrar Livro</button>
+    </form>
+    <button id="listar">Listar livros</button>
+    
+    <div id="livros"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
